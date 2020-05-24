@@ -33,3 +33,6 @@ jobs:
       
     - name: test_01
       run: pwd && ls -al
+    
+    - name: build
+      run: cd srv && go build main.go
