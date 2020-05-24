@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package jun.srv.id;
+
+option go_package = ".;proto";
+
+service IdService {
+    rpc GetId (IdRequest) returns (IdResponse);
+}
+
+message IdRequest {
+    // @inject_tag: json="node"
+    int64 node = 1;
+}
+
+message IdResponse {
+    // @inject_tag: json="id" form="id"
+    int64 id = 1;
+
+    // @inject_tag: json="node" form="node"
+    int64 node = 2;
+}
