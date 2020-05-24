@@ -29,11 +29,7 @@ jobs:
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
         fi
-    - name: test_01
-      uses: pwd && ls -al
+        
       
-    - name: Build
-      run: go build -v .
-
-    - name: Test
-      run: go test -v .
+    - name: test_01
+      run: pwd && ls -al
